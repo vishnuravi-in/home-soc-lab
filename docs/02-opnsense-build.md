@@ -32,6 +32,7 @@
 | Root password rejected | Keyboard layout mismatch between installer and console | Verified typed characters at login prompt; re-entered accordingly |
 | "Same interface name" error | `em0` re-entered at LAN prompt | Matched prompts by label: LAN = `em1` |
 | DHCP range rejected | Partial address (`.100`) entered | Entered full addresses within interface subnet |
+| Kali received no IPv4 address on ATTACK segment | Dnsmasq DHCP not serving the ATTACK interface | Proved request arrival with `tcpdump`, confirmed service with `sockstat`, added ATTACK to Dnsmasq interface list — see [TS-001](troubleshooting/TS-001-dhcp-attack-segment.md) |
 
 ## Lessons Learned
 - Read the evidence surrounding an error (e.g., the detected interface list), not

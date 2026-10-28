@@ -4,7 +4,7 @@ A self-built Security Operations Centre lab for hands-on detection engineering,
 threat hunting and incident response practice. Every attack simulation is mapped
 to the **MITRE ATT&CK** framework and documented with a full incident report.
 
-> **Status:** 🟡 Phase 1 in progress (Firewall & network segmentation)
+> **Status:** 🟡 Phase 3 in progress (Windows endpoint + Sysmon)
 
 ---
 
@@ -39,9 +39,9 @@ flowchart TB
 | Phase | Milestone                                   | Status |
 |-------|---------------------------------------------|--------|
 | 0     | Host preparation & capacity planning        | ✅     |
-| 1     | OPNsense firewall & network segmentation    | 🟡     |
-| 2     | Kali Linux attacker VM                      | ⬜     |
-| 3     | Windows endpoint + Sysmon                   | ⬜     |
+| 1     | OPNsense firewall & network segmentation    | ✅     |
+| 2     | Kali Linux attacker VM & ATTACK rules       | ✅     |
+| 3     | Windows endpoint + Sysmon                   | 🟡     |
 | 4     | Wazuh SIEM deployment & agent enrolment     | ⬜     |
 | 5     | Firewall log forwarding to SIEM             | ⬜     |
 | 6     | Attack simulations & incident reports       | ⬜     |
@@ -53,7 +53,10 @@ home-soc-lab/
 ├── docs/
 │   ├── 00-host-preparation.md
 │   ├── 01-network-architecture.md
-│   └── 02-opnsense-build.md
+│   ├── 02-opnsense-build.md
+│   ├── 03-kali-attack-lane.md
+│   └── troubleshooting/
+│       └── TS-001-dhcp-attack-segment.md
 ├── configs/            # Exported configs (sanitised)
 ├── detections/         # Custom rules & queries
 ├── incident-reports/   # One report per simulated attack

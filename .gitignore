@@ -1,0 +1,18 @@
+# Never commit VM disks, installers or archives
+*.iso
+*.vdi
+*.vmdk
+*.ova
+*.7z
+*.bz2
+
+# Never commit secrets or unsanitised configs
+config-*.xml
+*.key
+*.pem
+.env
+
+# OS clutter
+Thumbs.db
+desktop.ini
+.DS_Store
